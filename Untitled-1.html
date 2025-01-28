@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            background-color: #ff4d6d;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #d6336c;
+        }
+        #first-page {
+            background: url('https://i.pinimg.com/236x/f8/98/b1/f898b10e6054eba95294f0cc6174cb87.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 50px 20px;
+            border-radius: 20px;
+            color: white;
+        }
+        #question-page {
+            background: url('https://i.pinimg.com/474x/e2/61/20/e2612063e27039f791cf9e315625ed52.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 50px 20px;
+            border-radius: 20px;
+            color: white;
+        }
+        #second-page {
+            background: url('https://i.pinimg.com/236x/99/8b/8e/998b8ee2ecb905707da63cd9c6e4e759.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 50px 20px;
+            border-radius: 20px;
+            color: white;
+        }
+        #no-theme {
+            background: url('https://i.pinimg.com/736x/68/c9/cc/68c9ccff9a92470db3d1990da5241db2.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 50px 20px;
+            border-radius: 20px;
+            color: white;
+        }
+        .quote {
+            font-size: 1.5em;
+            font-style: italic;
+            color: #f5e1da;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio Element for Background Music -->
+    <audio autoplay loop>
+        <source src="C:\Users\rr199\Downloads\The_Untamed_-_Flute_-_Instrumental.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container" id="first-page">
+        <h1>Hello My Sexy Lady ❤️</h1>
+        <p class="quote">"How Are You h ?"</p>
+        <p>Would you like to meet meee.</p>
+        <p> Valentine Day is around the corner... and if I make it there, I gurantee things might just get a little wetter than expected - wheter it's weather or somting else entirely.</p>
+        <button class="btn" onclick="showQuestionPage()">Continue 💕</button>
+    </div>
+
+    <div class="container second-page" id="question-page" style="display: none;">
+        <h2>are you ready for it ? 💖</h2>
+        <button class="btn" onclick="handleResponse('yes')">Yes 💕</button>
+        <button class="btn" onclick="handleResponse('no')">No 😔</button>
+    </div>
+
+    <div class="container second-page" id="second-page" style="display: none;">
+        <h2>Get Ready for Our Special Date! 🌹</h2>
+        <img src="https://media.tenor.com/Fa8qitdHSwsAAAAj/love-it-kiss.gif" alt="Romantic Image">
+        <p>My heart beats only for you. Looking forward to creating beautiful memories together! ❤️</p>
+    </div>
+
+    <div id="no-theme" class="container" style="display: none;">
+        <h2>Thond Phodel Parat ja ani Yes Mhan  💙</h2>
+    </div>
+
+    <script>
+        function showQuestionPage() {
+            document.getElementById('first-page').style.display = 'none';
+            document.getElementById('question-page').style.display = 'block';
+        }
+
+        function handleResponse(response) {
+            document.getElementById('question-page').style.display = 'none';
+            if (response === 'yes') {
+                document.getElementById('second-page').style.display = 'block';
+            } else {
+                document.getElementById('no-theme').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
